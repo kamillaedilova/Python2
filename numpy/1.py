@@ -17,18 +17,14 @@ for i in range(n):
         wr_num_col.append(i)
 #print(wr_num_col)
 for i in range(len(wr_num_row)):
-    answer=0
-    if wr_num_row[i]==n-1:
-        answer=0
-for i in range(len(wr_num_row)):
     if wr_num_col[i] == n-1:
-        answer = 0
-        for j in range(n-1):   
-            answer += array[[i]][j]
+        ans = 0
+        for j in range(n-1):
+            ans += array[wr_num_row[i]][j]
     else:
         ans = array[wr_num_col[i]][n-1]
         for j in range(n-2, 0, -1):
-            answer -= array[wr_num_row[i]][j]
+            ans -= array[wr_num_row[i]][j]
 
-    print(f"wrong number(arr{wr_num_row[i]+1}) -- {answer}")        
+    print(f"wrong number(arr{wr_num_row[i]+1}) -- {ans}")        
 
